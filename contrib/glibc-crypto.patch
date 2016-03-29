@@ -1,0 +1,19 @@
+*** glibc-2.14-crypt.diff.orig	2016-03-28 19:35:25.863094339 +0000
+--- glibc-2.14-crypt.diff  19:36:30.792094339 +0000
+***************
+*** 15,21 ****
+   
+  +libcrypt-routines += crypt_blowfish x86 crypt_gensalt wrapper
+  +
+!  tests := cert md5c-test sha256c-test sha512c-test
+   
+!  distribute := ufc-crypt.h crypt-private.h ufc.c speeds.c README.ufc-crypt \
+  diff -urp glibc-2.14.orig/crypt/Versions glibc-2.14/crypt/Versions
+--- 15,21 ----
+   
+  +libcrypt-routines += crypt_blowfish x86 crypt_gensalt wrapper
+  +
+!  tests := cert md5c-test sha256c-test sha512c-test badsalttest
+   
+!  include ../Makeconfig
+  diff -urp glibc-2.14.orig/crypt/Versions glibc-2.14/crypt/Versions
